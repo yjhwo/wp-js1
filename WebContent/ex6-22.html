@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// !이벤트 핸들러 정의!
+var displayDate = function(){
+	var d = new Date();
+	document.getElementById("demo").innerHTML = (d.getYear()+1900)+"년 "+
+												(d.getMonth()+1)+"월"+
+												d.getDate()+"일";	
+}
+var disappear = function(){
+	document.getElementById("demo").innerHTML ="";	
+}
+
+// DOM이 완성(문서가 완전히 로딩되었을 때...) !이벤트 핸들러(함수)매핑!
+window.onload = function(){
+	var btn = document.getElementById("myBtn");
+	console.log(btn.id);
+	// 함수 대체하는거라서 이름만 적는다. ()안붙임
+	btn.onclick = displayDate;
+	btn.onmouseover = displayDate;
+	btn.onmouseout = disappear;
+
+	console.log(navigator.userAgent);
+	console.log(navigator.cookieEnabled);
+}
+
+// IE만 지원!!
+window.onunload = function(){
+	alert("unload");
+}
+
+</script>
+</head>
+
+<body>
+	<p>버튼을 클릭하면  <em>displayDate()</em> 함수가 실행 됩니다.</p>
+	<button id="myBtn">Try it</button>
+	<p id="demo"></p>
+</body>
+</html>

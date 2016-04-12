@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var displayDate = function(){
+	var d = new Date();
+	document.getElementById("demo").innerHTML = (d.getYear()+1900)+"년 "+
+												(d.getMonth()+1)+"월"+
+												d.getDate()+"일";
+}
+
+var disappearDate = function(){
+	document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+</head>
+
+<body>
+<p>버튼을 클릭하면  <em>displayDate()</em> 함수가 실행 됩니다.</p>
+<button id="myBtn" onClick="displayDate();" 
+		onmouseover="displayDate();" onmouseout="disappearDate();">Try it</button>
+<p id="demo"></p>
+
+</body>
+</html>

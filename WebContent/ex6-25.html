@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+window.onload = function(){
+	var divElement = document.getElementById("div");
+	
+	divElement.onmousedown = function(){
+		this.style.backgroundColor = "#1ec5e5";
+		this.innerHTML="버튼을 떼주세요.";
+		console.log("onmousedown");
+	}
+	divElement.onmouseup = function(){
+		this.style.backgroundColor = "#D94A38";
+		this.innerHTML="클릭하세요.";
+		console.log("onmouseup");
+	}
+	divElement.onclick = function(){
+		console.log("onclick");
+	}
+	divElement.ondblclick = function(){	// 더블클릭
+		console.log("ondblclick");
+	}
+}
+
+</script>
+
+</head>
+<body>
+<div id="div" style="background-color:#D94A38;width:200px;height:200px;padding:40px;">
+	클릭하세요!
+</div>
+</body>
+</html>

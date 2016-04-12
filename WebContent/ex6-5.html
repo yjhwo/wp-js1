@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var Rectangle = function(x1, y1, x2, y2, color){
+	this.x1 = x1;
+	this.y1 = y1;
+	this.x2 = x2;
+	this.y2 = y2;
+	this.color = color;
+}
+
+Rectangle.prototype.show = function(){
+	console.log(this.x1+":"+this.y1+":"+this.x2+":"+this.y2+":"+this.color);	
+	document.write("<div style='position:absolute;"+
+					"left:"+this.x1+"px; top:"+this.y1+"px;"+
+					"width:"+(this.x2-this.x1)+"px; height:"+(this.y2-this.y1)+"px;"+
+					"background-color:"+this.color+"'></div>");
+}
+
+// 객체 생성
+var rect1 = new Rectangle(10, 10, 150, 150, "#f00");
+var rect2 = new Rectangle(100, 100, 250, 450, "#0f0");
+var rect3 = new Rectangle(300, 400, 400, 500, "#00f");
+
+rect1.show();
+rect2.show();
+rect3.show();
+
+
+</script>
+</head>
+<body>
+	<!-- absolute: 절대좌표.  left,top 줄 수 있다. -->
+	<!-- <div style="position:absolute;
+	 			left:50px; top:50px;
+	 			width:140px; height:140px;
+	 			background-color: #f00"> -->
+	 
+	</div>
+</body>
+</html>

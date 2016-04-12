@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var func = function(arg1, arg2, arg3, arg4){
+		console.log(arg1);
+		console.log(arg2["name"]+":"+arg2.age);
+		arg3();
+		console.log(arg4);
+	}
+	
+	func(10, {
+			name:"안대혁",
+			age:43
+		}, function(){
+			console.log("called");
+		},(function(){
+			return 10;
+		})());
+	
+	(function(a,b,c){
+		console.log(a,b,c);
+	})(10,20,30); 
+	// function만들자 마자 바로 call하기 위해서 ()
+	
+	var func2 = function(){
+		var sum = 0;
+		var length = arguments.length;
+		
+		for(var i=0; i<length; i++){
+			sum += arguments[i];
+		}
+		return sum;
+	}
+	
+	console.log( func2( 10 ) );
+	console.log( func2( 10, 20 ) );
+	console.log( func2( 10, 20, 30 ) );
+	console.log( func2( 10, 20, 30, 40 ) );
+	console.log( func2( 10, 20, 30, 40, 50 ) );
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

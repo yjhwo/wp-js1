@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var array1 = new Array(10);
+	array1[20] = "Hello World";
+	array1[10] = 1000;
+	console.log(array1);
+	
+	var array2 = new Array();
+	
+	// 리터럴로 생성하기- index로밖에 접근 안 됨
+	var array3 = [{
+		name:"안대혁",
+		age:30
+	},{
+		name:"둘리",
+		age:20
+	}];
+	
+	console.log(array3[0].age);
+	
+	
+	// 객체에 접근 시 배열 첨자로 접근 가능하다.
+	// 연관 배열: 객체의 속성값으로 접근함
+			
+	var map = {
+			"안대혁":{name:"안대혁",age:40},
+			"둘리":{name:"둘리",age:40}
+	}
+	
+	console.log(map);
+	console.log(map["안대혁"]);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

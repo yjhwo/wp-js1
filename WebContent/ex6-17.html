@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*var onH1Clicked = function(el){
+	console.log(this);	// 이 this는 window이다. 
+	console.log(el);	// ※ element this를 받아줘야 한다. ※
+	// this.innerHTML = 'clicked!!';
+	el.innerHTML = 'clicked!!!';
+}
+*/
+var onH1Clicked = function(){
+	// 매개변수로 element를 받고싶지 않은 경우엔 el을 구해서 사용하면 된다.
+	var el = document.getElementById("my-h1");
+	el.innerHTML = "clicked!!";
+}
+
+</script>
+</head>
+<body>
+
+<!-- <h1 onclick="this.innerHTML='clicked!!';">Click on this text!</h1> -->
+<!-- this는 해당하는 element 객체인 h1을 뜻한다. -->
+
+<!-- <h1 id="my-h1" onclick="onH1Clicked(this);">Click on this text!</h1> -->
+<h1 id="my-h1" onclick="onH1Clicked();">Click on this text!</h1>
+<h1 id="my-h2" onclick="onH1Clicked();">Click on this text!</h1>
+
+</body>
+</html>

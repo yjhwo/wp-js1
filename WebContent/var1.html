@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ * object
+ * number
+ * string
+ * boolean
+ * function
+ * undefined
+ */
+var number = 5;
+var number2 = 3.14;
+var str = "hello world";
+var b = true;
+var u;
+var n = null;
+
+if(u === null){
+	alert("!!!!!");
+}
+if(2 === "2"){
+	alert("!!!!!!!!!!!!");
+}
+/* 값만 비교하려면 ==사용해도 되지만, type까지 같이 비교하려면 = 3개 써주면 된다.(엄격하게) */
+
+
+var f = function(){
+	this.a = 10;	
+}
+
+//function f1(){
+	/* 이것도 되지만, 위 처럼 정의해주는게 좋다.(f라는 변수는 function이다 라는 느낌)
+		퍼블리셔들이 많이 쓰던 방법.
+	*/
+//}
+
+console.log(number+":"+typeof number);
+console.log(number2+":"+typeof number2);
+console.log(str+":"+typeof str);
+console.log(b+":"+typeof b);
+console.log(u+":"+typeof u);
+console.log(n+":"+typeof n);
+console.log(f+":"+typeof f);
+
+var str1 = new String("Hello World2");
+console.log(str1+":"+typeof str1);
+/* new로 만들게 되면 object 타입이다. 좀 더 내부적으로 들어가면 string타입인 것 */
+
+var myF = new f();
+console.log(myF+":"+typeof myF);
+/* 생성자를 사용해서 객체를 하나 만들겠다는 뜻 
+ * [object Object] : Object타입의 Object
+ */
+console.log(myF.a);
+console.log(myF);
+/* f {a: 10} : 자바스크립트에서 object를 표시하는 방식! */
+
+var myF2 = {
+	a: 10
+}
+/* 속성 a가 10을 가지고 있는 객체 myF2 */
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

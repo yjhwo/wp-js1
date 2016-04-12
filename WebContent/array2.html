@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var hege = ["Cecile", "Lone"];
+var stale = ["Emil","Tobias","Linus"];
+
+var children = hege.concat(stale);
+
+console.log(hege );
+console.log(children );
+console.log(stale );
+
+Array.prototype.myfunc = function(){
+	console.log(this);
+}
+
+var fruits = [ "Banana", "Orange", "Apple", "Mango", 1000, 3.14,{name:"안대혁",age:40} ];
+var energy = fruits.join(":");
+console.log(energy)
+
+fruits.myfunc();
+
+var fruits2 = [ "Banana", "Orange", "Apple", "Mango"];
+fruits2.push("Kiwi");
+console.log(fruits2);
+
+fruits2.push("Pineapple");
+console.log(fruits2);
+
+console.log(fruits2.pop());
+console.log(fruits2.pop());
+console.log(fruits2.pop());
+console.log(fruits2);
+// stack처럼 사용 가능
+
+fruits2.reverse();
+console.log(fruits2);
+
+fruits2.shift();
+console.log(fruits2);
+
+fruits2.push("Mango");
+fruits2.push("Grapes");
+console.log(fruits2);
+
+var fruits3 = fruits2.slice(2,4);
+console.log(fruits2);
+console.log(fruits3);
+
+fruits2.sort();
+console.log(fruits2);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

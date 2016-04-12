@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var employee = new Object();
+employee.name = "안대혁";
+employee.age = 43;
+
+employee.showInfo = function(){
+	console.log(this.name+":"+this.age);
+	/* 그냥 name을 적게 되면 window의 name을 찾게 된다.*/
+}
+
+employee.showInfo();
+/* window.employee.showInfo(); 사실은 이거 */
+console.log(employee.age);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

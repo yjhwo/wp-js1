@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+// 연관 배열
+var employee1 = {
+		name:"홍길동",
+		title:"과장",		
+		showInfo:function(){
+			console.log(this.name+":"+this["title"]);
+		}
+}
+
+	console.log(employee1.name+":"+employee1["title"]);
+//				속성으로 접근하는 방식		배열로 접근하는 방식
+employee1.showInfo();
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var v = "Hello World2";	/* 전역 변수 */
+
+var f = function(){
+	v = "Hello World";
+}
+
+f();
+console.log(v);
+/* 함수가 한 번 실행이 되어야 v가 메모리에 잡힌다.
+	var 안 붙이면 전역 변수가 되고, var를 붙이면 지역변수가 된다.(붙이는 습관을 들여라) */
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

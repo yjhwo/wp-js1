@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var i = 10;			// number object
+	var employee = {};	// Object object, new Object() 대체
+	
+	employee.name = "안대혁";
+	employee.age = 43;
+
+	employee.showInfo = function(){
+		console.log(this.name+":"+this.age);
+	}
+
+	employee.showInfo();
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

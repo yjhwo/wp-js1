@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var s = "This is a String";
+	var length = s.length;
+	for(var i=0; i<length; i++){
+		console.log(s[i]);	
+	}
+	
+	var s1 = "number"+5;
+	console.log(s1);
+	
+	var n = 5 + "5";
+	console.log(n);
+	
+	var n2 = "5" + 5;
+	console.log(n2);
+	
+	var n3 = parseInt("5",10)+5;	
+	console.log(n3);
+	
+	var str = "String1 String2 String3";
+	console.log(str.indexOf("String2"));
+	
+	var str2 = str.substr(8);
+	console.log(str2);
+	
+	var str3 = str.substr(8, 13);	// substr은 카운트처럼 작동, startIndex, count
+	console.log(str3);
+	
+	var str4 = str.substring(8, 14);	// substring은 startIndex, lastIndex-1
+	console.log(str4);
+	
+	
+	var tokens = str.split("");			// 자바스크립트에선 ''와 ""비교 안함
+	console.log(tokens);
+	
+	// 전역 함수
+	var escapeHTML = function(str){
+		return str.replace(/>/g,"&gt;").replace(/</g,"&lt;");	// /</g : 정기 표현식, g:모든 것을 의미함
+	}
+
+	// String 객체의 Prototype 확장
+	String.prototype.escapeHTML = function(){
+		return this.replace(/>/g,"&gt;").replace(/</g, "&lt;");
+		//|->string자체
+	}		
+	
+	var onLoaded = function(){
+		var html = "<h3>Here's a headline!</h3>";	// <: &gt; >:&lt; &: &amp;
+		//console.log(escape(html));
+		//document.getElementById("myDiv").innerHTML = html;			// html이 div에 그대로 들어간 경우 -> <h3>태그가 먹는다.
+		document.getElementById("myDiv").innerHTML = escapeHTML(html);	// html을 escape시킨 경우 -> <,>기호들을 태그로 쓰지 않고 &lt라는 문자로 쓰고 싶어서..
+		//document.getElementById("myDiv").innerHTML = html.escapeHTML();// 위와 같다. 그냥 문자로 표시된다.
+	}
+	// 엘리먼트가 안 그려져서???
+	// escape : utf-8코드값으로 변환시켜주는 것
+	
+			
+			
+</script>
+</head>
+<body onload = "onLoaded();">
+<!-- 	<h1>1&gt;100 == true &amp;&amp; 100 &lt; 200</h1> -->
+	
+	<div id="myDiv"></div>
+	
+	<div>
+		a &lt; 100 = true
+	</div>
+	
+</body>
+</html>

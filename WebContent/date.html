@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var d = new Date();			// 현재 시간
+	console.log(d);
+	
+	var d1 = new Date(2016,3); // 2016-4-1
+	console.log(d1);
+	
+	var d2 = new Date(2016,3,2); // 2016-4-1(0부터 시작함)
+	console.log(d2);
+	
+	var d3 = new Date(2016,3,2,10); // 2016-4-1 10:00:00
+	console.log(d3);
+	
+	var d4 = new Date(2016,3,2,10,30,30); // 2016-4-1 10:30:30
+	console.log(d4);
+	
+	var d5 = new Date( 200000*1000 );	// 1970-1-1 09:00:00부터 시작한 milliseconds값
+	console.log(d5);
+	
+	console.log(
+			(d2.getYear()+1900)+"년"+
+			(d2.getMonth()+1)+"월"+
+			d2.getDate()+"일"+
+			d2.getHours()+":"+
+			d2.getMinutes()+":"+
+			d2.getSeconds()
+	);
+</script>
+</head>
+<body>
+	 안녕하세요.
+</body>
+</html>
